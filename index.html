@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr">
+<head>
+	<title>jQuery_projet_02_exercice_01</title>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container-fluid bg-primary row P-3 justify-content-center">
+		<h1 class="col-12 p-4 text-center">jQuery_projet_02 Exercice_01</h1>
+		<p class="col-9 p-4 text-center">Au clic sur le bouton, afficher une boite de dialogue avec le message de votre choix.</p>
+		<div class="offset-1 col-10 row justify-content-center">
+			<form class="bg-secondary m-4">
+				<button class="btn btn-outline-warning p-3 m-3" id="clique-moi" name="button" type="button">CLIQUEZ MOI !</button>
+			</form>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.js">
+	</script>
+	<script>
+	 $(document).ready(function() {
+	 //ici on utilise le gestionnaire d'événement .on plus bas il existe aussi une méthode dédiée
+	 // à l'événement click => .click() pour écrire directement la fonction
+	   $("#clique-moi").on("click", function(){alert ("LOVE !");});
+	 // pour pouvoir la afficher la boîte de dialogue en cliquant sur le bouton à l'ID; "#clique-moi"
+	 // on applique la méthode de l'événement click et une fonction d'alerte affichant cette boîte
+	  // $("#clique-moi").click(function(){alert("LOVE !");});
+	 });
+	</script>
+</body>
+</html>
